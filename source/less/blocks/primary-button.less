@@ -1,8 +1,7 @@
 .primary-button {
-  display: block;
   background-color: @primary;
   color: #ffffff;
-  .oswald-font ();
+  .oswald-regular ();
   text-transform: uppercase;
   text-align: center;
   font-size: 14px;
@@ -10,6 +9,14 @@
   padding: 10px;
   text-decoration: none;
   cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .primary-button {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 12px 25px 14px 25px;
+  }
 }
 
 .primary-button_gray {

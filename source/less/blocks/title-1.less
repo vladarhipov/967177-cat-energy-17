@@ -1,17 +1,12 @@
 .title-1 {
-  .oswald-font ();
+  .oswald-regular ();
   font-size: 36px;
   line-height: 36px;
 }
 
-.title-1_white {
-  color: #ffffff;
-}
-
-.title-1_color_1 {
-  color: @black-1;
-}
-
-.title-1_center {
-  text-align: center;
+@media (min-width: @tablet-width) {
+  .title-1 {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
