@@ -1,5 +1,5 @@
 .title-3 {
-  .oswald-font ();
+  .oswald-regular ();
   font-size: 16px;
   line-height: 20px;
   color: @black-1;
@@ -11,4 +11,10 @@
 
 .title-3_text-align-center {
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .title-3 {
+    font-size: 20px;
+  }
 }

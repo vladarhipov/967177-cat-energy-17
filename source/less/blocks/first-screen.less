@@ -1,11 +1,33 @@
 .first-screen {
+  position: relative;
   padding-top: 2px;
-  padding-bottom: 20px;
-  background-image: url("/img/index-background-mobile@1x.jpg"), linear-gradient(#63a73a 305px, #ffffff 305px);
+  padding-bottom: 60px;
+  background-image: url("../img/index-background-mobile@1x.jpg"), linear-gradient(#63a73a 305px, #ffffff 305px);
   background-size: 320px 305px, contain;
   background-position: top center, 0 0;
   background-repeat: no-repeat;
   background-color: #ffffff;
+}
+
+.first-screen__text-wrapper {
+
+}
+
+.first-screen__title-1 {
+  text-align: center;
+  color: #ffffff;
+}
+
+.first-screen__paragraph-lead {
+  text-align: center;
+  color: #ffffff;
+}
+
+.first-screen__primary-button {
+  position: absolute;
+  width: calc(100% - 60px);
+  bottom: 20px;
+  left: 20px;
 }
 
 .first-screen__product-illustration {
@@ -14,4 +36,86 @@
   margin-right: auto;
   width: 280px;
   height: 271px;
+}
+
+@media (min-width: @tablet-width) {
+  .first-screen {
+    background: #ffffff;
+  }
+
+  .first-screen__text-wrapper {
+    padding-left: 90px;
+    position: relative;
+    z-index: 1;
+  }
+
+
+  .first-screen__title-1 {
+    max-width: 420px;
+    color: @black-1;
+    text-align: left;
+  }
+
+  .first-screen__paragraph-lead {
+    max-width: 420px;
+    color: @black-1;
+    text-align: left;
+  }
+
+  .first-screen__primary-button {
+    position: inherit;
+    width: auto;
+    z-index: 1;
+    display: inline-block;
+    bottom: 0;
+    left: 0;
+  }
+
+  .first-screen__product-illustration {
+    z-index: 0;
+    position: relative;
+    margin-top: -60px;
+    width: 709px;
+    height: 609px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .first-screen {
+  position: relative;
+  padding-top: 100px;
+  margin-bottom: 80px;
+  }
+
+  .first-screen::after {
+    position: absolute;
+    z-index: 0;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .first-screen__title-1 {
+
+  }
+
+  .first-screen__paragraph-lead {
+    text-align: left;
+  }
+
+  .first-screen__product-illustration {
+    z-index: 1;
+    width: 552px;
+    height: 499px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
