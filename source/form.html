@@ -14,17 +14,18 @@
     <header class="page-header">
       <div class="content-container">
         <div class="page-header__wrapper">
-          <a href="/" class="page-header__logo-link">
-            <img class="page-header__logo-picture" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип интернет-магазина CAT ENERGY">
-          </a>
-          <button class="page-header__menu-button" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-            <svg x="0px" y="0px" viewBox="0 0 24 18">
-              <rect y="16" width="24" height="2"/>
-              <rect y="8" width="24" height="2"/>
-              <rect width="24" height="2"/>
-            </svg>
-          </button>
+          <div class="page-header__logo-menu-button-wrapper">
+            <a href="/" class="page-header__logo-link">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg" width="202" height="60">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="173" height="58">
+                <img class="page-header__logo-picture" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип интернет-магазина CAT ENERGY">
+              </picture>
+            </a>
+            <button class="page-header__menu-button visually-hidden" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+          </div>
           <nav class="page-header__main-nav">
             <ul class="page-header__site-list">
               <li class="page-header__site-item"><a href="/" class="page-header__link">Главная</a></li>
@@ -105,6 +106,8 @@
         </div>
       </div>
     </footer>
+
+  <script src="less/blocks/page-header/page-header.js"></script>
 
   </body>
 </html>

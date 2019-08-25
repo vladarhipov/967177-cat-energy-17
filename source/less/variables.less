@@ -1,3 +1,4 @@
+@mobile-width-only: 767px;
 @tablet-width: 768px;
 @desktop-width: 1300px;
 @retina-dpi: 144dpi;
@@ -22,5 +23,12 @@
   .content-container {
     padding-left: 30px;
     padding-right: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .content-container {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
