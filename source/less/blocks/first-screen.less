@@ -1,32 +1,31 @@
 .first-screen {
   position: relative;
-  padding-top: 2px;
-  padding-bottom: 60px;
+  padding-top: 1px;
+  padding-bottom: 45px;
   background-image: url("../img/index-background-mobile@1x.jpg"), linear-gradient(#63a73a 305px, #ffffff 305px);
   background-size: 320px 305px, contain;
-  background-position: top center, 0 0;
+  background-position: top left, 0 0;
   background-repeat: no-repeat;
   background-color: #ffffff;
 }
 
-.first-screen__text-wrapper {
-
-}
-
 .first-screen__title-1 {
+  margin-top: 26px;
   text-align: center;
+  margin-bottom: 22px;
   color: #ffffff;
 }
 
 .first-screen__paragraph-lead {
   text-align: center;
   color: #ffffff;
+  margin-bottom: 28px;
 }
 
 .first-screen__primary-button {
   position: absolute;
-  width: calc(100% - 60px);
-  bottom: 20px;
+  width: calc(100% - 40px);
+  bottom: 22px;
   left: 20px;
 }
 
@@ -34,6 +33,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 18px;
   width: 280px;
   height: 271px;
 }
@@ -41,9 +41,12 @@
 @media (min-width: @tablet-width) {
   .first-screen {
     background: #ffffff;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   .first-screen__text-wrapper {
+    margin-top: 40px;
     padding-left: 90px;
     position: relative;
     z-index: 1;
@@ -52,12 +55,14 @@
 
   .first-screen__title-1 {
     max-width: 420px;
+    margin-bottom: 40px;
     color: @black-1;
     text-align: left;
   }
 
   .first-screen__paragraph-lead {
     max-width: 420px;
+    margin-bottom: 48px;
     color: @black-1;
     text-align: left;
   }
@@ -74,7 +79,8 @@
   .first-screen__product-illustration {
     z-index: 0;
     position: relative;
-    margin-top: -60px;
+    margin-top: -80px;
+    margin-bottom: 0;
     width: 709px;
     height: 609px;
     margin-left: auto;
@@ -85,9 +91,10 @@
 
 @media (min-width: @desktop-width) {
   .first-screen {
-  position: relative;
-  padding-top: 100px;
-  margin-bottom: 80px;
+    position: relative;
+    padding-top: 184px;
+    padding-bottom: 188px;
+    margin-bottom: 80px;
   }
 
   .first-screen::after {
@@ -103,19 +110,23 @@
     background-repeat: no-repeat;
   }
 
-  .first-screen__title-1 {
-
+  .first-screen__text-wrapper {
+    padding-left: 80px;
+    position: relative;
+    z-index: 1;
   }
 
   .first-screen__paragraph-lead {
     text-align: left;
+    margin-bottom: 54px;
   }
 
   .first-screen__product-illustration {
+    position: absolute;
     z-index: 1;
     width: 552px;
     height: 499px;
-    margin-left: auto;
-    margin-right: auto;
+    top: 200px;
+    left: calc(50% - 160px);
   }
 }
