@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Подбор программы</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
+    <title>Подбор программы CAT ENERGY</title>
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" />
     <link rel="preload" href="fonts/oswaldregular.woff2" as="font" />
   </head>
   <body>
+
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
 
     <header class="page-header">
       <div class="content-container">
@@ -55,19 +58,19 @@
             <li class="social__item">
               <a href="#" class="social__link page-footer__link-vkontakte">
                 <span class="visually-hidden">Вконтакте</span>
-                <svg class="social__svg" width="22" height="12"><use xlink:href="img/icon-set.svg#vkontakte"></use></svg>
+                <svg class="social__svg" width="22" height="12"><use xlink:href="#vkontakte"></use></svg>
               </a>
             </li>
             <li class="social__item">
               <a href="#" class="social__link page-footer__link-instagram">
                 <span class="visually-hidden">Инстаграм</span>
-                <svg class="social__svg" width="16" height="16"><use xlink:href="img/icon-set.svg#instagram"></use></svg>
+                <svg class="social__svg" width="16" height="16"><use xlink:href="#instagram"></use></svg>
               </a>
             </li>
             <li class="social__item">
               <a href="#" class="social__link page-footer__link-facebook">
                 <span class="visually-hidden">Фейсбук</span>
-                <svg class="social__svg" width="10" height="19"><use xlink:href="img/icon-set.svg#facebook"></use></svg>
+                <svg class="social__svg" width="10" height="19"><use xlink:href="#facebook"></use></svg>
               </a>
             </li>
           </ul>
@@ -75,14 +78,14 @@
           <div class="page-footer__copyright-wrapper">
             <a href="https://htmlacademy.ru/intensive/adaptive" class="paragraph-0 paragraph-0_color_4 page-footer__paragraph-0">HTML Academy</a>
             <a href="https://htmlacademy.ru/intensive/adaptive">
-              <svg class="page-footer__developer-logo" width="27" height="34"><use xlink:href="img/icon-set.svg#developer-logo"></use></svg>
+              <svg class="page-footer__developer-logo" width="27" height="34"><use xlink:href="#developer-logo"></use></svg>
             </a>
           </div>
         </div>
       </div>
     </footer>
 
-  <script src="less/blocks/page-header/page-header.js"></script>
+  <script src="js/page-header.js"></script>
   <script>
     // Picture element HTML5 shiv
     document.createElement( "picture" );
