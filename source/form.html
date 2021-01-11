@@ -42,15 +42,130 @@
     </header>
 
     <main>
-      <!-- Другие блоки -->
+      <section class="content-container form__content-container">
+        <h1 class="form__title">Подбор программы</h1>
+        <p class="form__lead">Заполните анкету, и мы подберем <br>
+программу питания для вашего кота</p>
+
+        <form>
+          <div class="form__columns form__cat-info-goal">
+            <fieldset class="form__column_half form__fieldset">
+              <legend class="visually-hidden">Информация о коте</legend>
+              <ul class="form__field-list">
+                <li class="form__field-item">
+                  <label class="field__wrapper">
+                    <span class="field__name">Имя:*</span>
+                    <input class="field field__input" name="name" type="name" value placeholder=" " required>
+                  </label>
+                </li>
+                <li class="form__field-item">
+                  <label class="field__wrapper">
+                    <span class="field__name">Вес (кг):*</span>
+                    <input class="field field__input" name="weight" type="" value placeholder=" " required>
+                  </label>
+                </li class="form__field-item">
+                <li>
+                  <label class="field__wrapper">
+                    <span class="field__name">Возраст (лет):</span>
+                    <input class="field field__input" name="years" type="" value optional>
+                  </label>
+                </li>
+              </ul>
+
+            </fieldset>
+
+            <fieldset class="form__column_half form__fieldset form__goal">
+              <legend class="visually-hidden">Цели</legend>
+                <ul class="radio-button">
+                <li><input type="radio" name="goal-group" id="losing-weight-id" value="" checked=""><label for="losing-weight-id">Похудение</label></li>
+                <li><input type="radio" name="goal-group" id="weight-gain-id" value=""><label for="weight-gain-id">Набор массы</label></li>
+                <li><input type="radio" name="goal-group" id="know-nothing-id" value=""><label for="know-nothing-id">Не знаю (нужен ваш совет)</label></li>
+              </ul>
+            </fieldset>
+          </div>
+
+          <fieldset class="form__fieldset form__client-info">
+            <legend class="form__green-band form__client-info-title">
+              <span class="form__green-band-inside">Контактные данные </span>
+              <span class="form__green-band-inside form__green-band-inside_second-row">(владельца кота)</span>
+            </legend>
+            <ul class="form__field-list form__columns">
+              <li class="form__field-item form__column_half">
+                <label class="field__wrapper">
+                  <span class="field__name field__name_phone-email">E-mail:*</span>
+                  <input class="field field__input field__with-icon field__email-icon" name="email" type="email" placeholder=" " required>
+                </label>
+              </li>
+              <li class="form__field-item form__column_half">
+                <label class="field__wrapper">
+                  <span class="field__name field__name_phone-email">Телефон:*</span>
+                  <input class="field field__input field__with-icon field__phone-icon" name="tel" type="tel" placeholder=" " required>
+                </label>
+              </li>
+
+
+          </fieldset>
+
+          <fieldset class="form__fieldset form__comment">
+            <legend class="form__green-band form__comment-title">
+              <span class="form__green-band-inside">Комментарий</span>
+            </legend>
+            <label class="field__wrapper"><textarea class="field field__textarea" name="comment" type="" value placeholder="Расскажите обо всех повадках кота"></label>
+          </fieldset>
+
+          <fieldset class="form__fieldset form__extra-info">
+            <legend class="form__green-band form__extra-info-title">
+              <span class="form__green-band-inside">Дополнительно</span>
+            </legend>
+            <div class="columns">
+              <ul class="form__checkbox-list">
+                <li class="checkbox__item form__checkbox-item">
+                  <input type="checkbox" name="sugar-substitute" id="sugar-substitute-id" value="sugar-substitute-on" checked="">
+                  <label for="sugar-substitute-id">Сахарозаменитель</label>
+                </li>
+                <li class="checkbox__item form__checkbox-item">
+                  <input type="checkbox" name="water" id="water-id" value="water-on">
+                  <label for="water-id">Питьевая вода</label>
+                </li>
+                <li class="checkbox__item form__checkbox-item">
+                  <input type="checkbox" name="milk" id="milk-id" value="milk-on">
+                  <label for="milk-id">Молоко</label>
+                </li>
+                <li class="checkbox__item form__checkbox-item">
+                  <input type="checkbox" name="vitamins" id="vitamins-id" value="vitamins-on">
+                  <label for="vitamins-id">Витамины</label>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+
+          <div class="form__button-wrapper">
+            <button class="primary-button primary-button_form-page form__button" type="submit" name="show-button">Отправить заявку</button>
+            <p class="form__button-caption">* — Обязательные поля</p>
+          </div>
+        </form>
+      </section>
+
+      <section class="map">
+        <div class="content-container">
+          <div class="map__contact-info">
+            <h2 class="visually-hidden">Контакты</h2>
+            <h3 class="map__title">Приглашаем <br>к сотрудничеству <br>дилеров!</h3>
+            <p class="map__address">ул. Большая <br>Конюшенная, д. 19/8<br><span class="map__city"> Санкт-Петербург</p>
+          </div>
+        </div>
+        <div id="map-desktop"></div>
+        <div id="map-mobile"></div>
+      </section>
+
     </main>
 
     <footer class="page-footer">
       <div class="content-container">
         <div class="page-footer__flex-wrapper">
           <div class="page-footer__logo-wrapper">
-            <a href="/" class="page-footer__logo">
-              <img class="page-footer__logo-name" src="img/logo-footer.svg" width="128" height="24" alt="Логотип интернет-магазина CAT ENERGY">
+            <a class="page-footer__logo">
+              <img class="page-footer__logo-img" src="img/logo-footer.svg" width="128" height="24" alt="Логотип интернет-магазина CAT ENERGY">
             </a>
           </div>
 
@@ -75,12 +190,10 @@
             </li>
           </ul>
 
-          <div class="page-footer__copyright-wrapper">
-            <a href="https://htmlacademy.ru/intensive/adaptive" class="paragraph-0 paragraph-0_color_4 page-footer__paragraph-0">HTML Academy</a>
-            <a href="https://htmlacademy.ru/intensive/adaptive">
-              <svg class="page-footer__developer-logo" width="27" height="34"><use xlink:href="#developer-logo"></use></svg>
-            </a>
-          </div>
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-wrapper">
+            <span class="page-footer__developer-name">HTML Academy</span>
+            <svg class="page-footer__developer-logo" width="27" height="34"><use xlink:href="#developer-logo"></use></svg>
+          </a>
         </div>
       </div>
     </footer>
@@ -91,6 +204,37 @@
     document.createElement( "picture" );
   </script>
   <script src="js/picturefill.js" async></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1N7DfHC7adSmpylXujMj1BBJPUYyXR9w&callback=initMap" async defer></script>
+  <script>
+    function initMap() {
+      var mapMobile = new google.maps.Map(document.getElementById('map-mobile'), {
+        center: {lat: 59.938797, lng: 30.323086},
+        zoom: 17,
+        disableDefaultUI: true
+      });
+
+      var bigImage = 'img/map-pin.png';
+      var smallMarker = new google.maps.Marker({
+        position: {lat: 59.938797, lng: 30.323086},
+        map: mapMobile,
+        icon: bigImage
+      });
+
+      var mapDesktop = new google.maps.Map(document.getElementById('map-desktop'), {
+        center: {lat: 59.939134, lng: 30.319854},
+        zoom: 17,
+        disableDefaultUI: true
+      });
+
+      var smallImage = 'img/map-pin.png';
+      var bigMarker = new google.maps.Marker({
+        position: {lat: 59.938797, lng: 30.323086},
+        map: mapDesktop,
+        icon: smallImage
+      });
+
+    }
+  </script>
 
   </body>
 </html>
