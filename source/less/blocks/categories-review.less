@@ -11,25 +11,31 @@
 .categories-review__item {
   margin: 0;
   margin-bottom: 20px;
-  padding: 6px 25px 20px 20px;
+  padding: 30px 25px 20px 20px;
   background-color: @bg-gray;
 }
 
-.categories-review__title-2 {
+.categories-review__title {
+  .oswald-regular ();
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: @black-1;
+  margin-top: 0;
   margin-left: 70px;
   margin-bottom: 30px;
   position: relative;
 }
 
-.categories-review__title-2_slim-icon {
+.categories-review__slim-icon {
   &::before {
     content: "";
     position: absolute;
     padding: 20px;
-    width: 67px;
-    height: 50px;
-    left: -70px;
-    top: -7px;
+    width: 50px;
+    height: 53px;
+    left: -68px;
+    top: -9px;
     z-index: 3;
     background: url("../img/icon-cat-slim.svg"), radial-gradient(circle closest-side, @primary 24px, transparent 25px);
     background-size: 35px 49px, 50px 50px;
@@ -39,15 +45,15 @@
   }
 }
 
-.categories-review__title-2_pro-icon {
+.categories-review__pro-icon {
   &::before {
     content: "";
     position: absolute;
     padding: 20px;
     width: 67px;
     height: 50px;
-    left: -78px;
-    top: -5px;
+    left: -76px;
+    top: -7px;
     z-index: 3;
     background: url("../img/icon-cat-pro.svg"), radial-gradient(circle closest-side, @primary 24px, transparent 25px);
     background-size: 67px 28px, 50px 50px;
@@ -56,53 +62,95 @@
   }
 }
 
+.categories-review__description {
+  font-size: 14px;
+  line-height: 18px;
+  color: @black-4;
+  border-bottom: 1px solid @line-gray;
+  padding-bottom: 21px;
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
 .categories-review__catalog-link {
+  .oswald-regular ();
+  font-size: 16px;
+  line-height: 16px;
+  color: @black-1;
+  margin-top: 0;
+  margin-bottom: 1em;
   text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
 
   &::after {
     content: "";
+    position: absolute;
     display: inline-block;
     vertical-align: top;
-    margin-left: 12px;
-    margin-top: 5px;
-    width: 25px;
-    height: 11px;
-    background-image: url("../img/icon-right-arrow-long.svg");
+    right: -47px;
+    top: 8px;
+    width: 32px;
+    height: 12px;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+    background-position: left -8px top;
     background-repeat: no-repeat;
   }
 }
 
-.categories-review__paragraph-1 {
-  border-bottom: 1px solid @line-gray;
-  padding-bottom: 23px;
-  margin-bottom: 16px;
+.categories-review__catalog-link:hover::after {
+  background-position: left top;
+  transition-duration: 0.15s;
 }
+
+.categories-review__catalog-link:active {
+  opacity: 30%;
+}
+
 
 @media (min-width: @tablet-width) {
   .categories-review__item {
-    padding: 42px 25px 58px 50px;
+    padding: 78px 25px 58px 52px;
     margin-bottom: 30px;
   }
 
-  .categories-review__title-2 {
+  .categories-review__title {
+    font-size: 36px;
+    line-height: 36px;
     margin-left: 0;
     margin-right: 265px;
-    margin-bottom: 24px;
+    margin-bottom: 26px;
     position: relative;
   }
 
-  .categories-review__paragraph-1 {
-    margin-right: 313px;
-    margin-bottom: 34px;
+  .categories-review__description {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 28px;
     border-bottom: none;
   }
 
-  .categories-review__catalog-link::after {
-    margin-left: 24px;
-    margin-top: 10px;
+  .categories-review__description_slim {
+    margin-right: 256px;
   }
 
-  .categories-review__title-2_slim-icon {
+  .categories-review__description_pro {
+    margin-right: 290px;
+  }
+
+
+  .categories-review__catalog-link {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .categories-review__catalog-link::after {
+    right: -56px;
+    margin-left: 24px;
+    margin-top: 2px;
+  }
+
+  .categories-review__slim-icon {
     &::before {
       display: none;
     }
@@ -113,8 +161,8 @@
       padding: 20px;
       width: 200px;
       height: 212px;
-      right: -236px;
-      top: -5px;
+      right: -228px;
+      top: 9px;
       z-index: 3;
       background: url("../img/icon-cat-slim.svg"), radial-gradient(circle closest-side, @primary 99px, transparent 100px);
       background-size: 140px 194px, 200px 200px;
@@ -123,7 +171,7 @@
     }
   }
 
-  .categories-review__title-2_pro-icon {
+  .categories-review__pro-icon {
     &::before {
       display: none;
     }
@@ -134,8 +182,8 @@
       padding: 20px;
       width: 268px;
       height: 200px;
-      right: -268px;
-      top: -5px;
+      right: -262px;
+      top: 10px;
       z-index: 3;
       background: url("../img/icon-cat-pro.svg"), radial-gradient(circle closest-side, @primary 99px, transparent 100px);
       background-size: 268px 112px, 200px 200px;
@@ -155,22 +203,23 @@
   .categories-review__item {
     display: inline-block;
     width: calc(50% - 80px);
-    padding: 40px 50px 60px 50px;
+    padding: 80px 50px 60px 50px;
     margin-left: 80px;
   }
 
-  .categories-review__title-2 {
+  .categories-review__title {
     margin-left: 162px;
     margin-right: 0;
-    margin-bottom: 70px;
+    margin-bottom: 73px;
     position: relative;
   }
 
-  .categories-review__paragraph-1 {
+  .categories-review__description {
     margin-right: 0;
+    margin-bottom: 5px;
   }
 
-  .categories-review__title-2_slim-icon {
+  .categories-review__slim-icon {
     &::after {
       display: none;
     }
@@ -182,8 +231,8 @@
       padding: 20px;
       width: 100px;
       height: 106px;
-      left: -168px;
-      top: -30px;
+      left: -160px;
+      top: -37px;
       z-index: 3;
       background: url("../img/icon-cat-slim.svg"), radial-gradient(circle closest-side, @primary 49px, transparent 50px);
       background-size: 70px 97px, 100px 100px;
@@ -192,7 +241,7 @@
     }
   }
 
-  .categories-review__title-2_pro-icon {
+  .categories-review__pro-icon {
     &::after {
       display: none;
     }
@@ -204,13 +253,17 @@
       padding: 20px;
       width: 134px;
       height: 100px;
-      left: -168px;
-      top: -30px;
+      left: -178px;
+      top: -32px;
       z-index: 3;
       background: url("../img/icon-cat-pro.svg"), radial-gradient(circle closest-side, @primary 49px, transparent 50px);
       background-size: 134px 56px, 100px 100px;
       background-repeat: no-repeat;
       background-position: 0 22px, 18px 0;
     }
+  }
+
+  .categories-review__catalog-link::after {
+    right: -60px;
   }
 }
